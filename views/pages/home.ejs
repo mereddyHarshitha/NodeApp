@@ -16,7 +16,7 @@
         </footer>
         <script>
           var url = "<%= ouathLightningURL %>";
-          var token = "Bearer "+"<%= oauthtoken %>";
+          var token = "<%= oauthtoken %>";
           console.log(token);
             $Lightning.use("c:OppLightningWebCompApp", function() {
                   $Lightning.createComponent("c:opportunityList", {},
