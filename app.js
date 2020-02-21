@@ -1,6 +1,6 @@
 var nforce = require('nforce');
 var express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
