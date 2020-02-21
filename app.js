@@ -1,6 +1,5 @@
 var nforce = require('nforce');
 var express = require('express');
-var cors = require('cors');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
@@ -13,7 +12,6 @@ var org = nforce.createConnection({
 });
 
 var app = express();
-app.use(cors());
 app.use(function(req, res, next) {
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, X-Response-Time, X-PINGOTHER, X-CSRF-Token,Authorization,X-Authorization');
