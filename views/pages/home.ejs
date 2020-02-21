@@ -18,8 +18,8 @@
           var url = "<%= ouathLightningURL %>";
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
-            $Lightning.use("SEDreamin:SalesLeaderBoardVfApp", function() {
-                  $Lightning.createComponent("SEDreamin:SalesLeaderMain", {},
+            $Lightning.use("c:OppLightningWebCompApp", function() {
+                  $Lightning.createComponent("c:opportunityList", {},
                      "leaderboard",
                       function(cmp) {
                          // do some stuff
