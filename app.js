@@ -1,6 +1,5 @@
 var nforce = require('nforce');
 var express = require('express');
-const cors = require('cors');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
@@ -32,7 +31,7 @@ app.use('/home', routesHome);
 
 app.set('view engine', 'ejs');
 
-app.get('/', cors(), function(req,res){
+app.get('/', function(req,res){
   res.redirect(org.getAuthUri());
 });
 
