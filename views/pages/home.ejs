@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <% include ../partials/ldOut %>
-  </head>
-  <body class="slds">
-    <header>
-    </header>
-    <main>
-      <div >
-        <p>Sales Leaderboard On Heroku</p>
-        <div id="leaderboard"></div>
-          </div>
-      </main>
-        <footer>
-        </footer>
         <script>
           var url = "<%= ouathLightningURL %>";
           var token = "Bearer "+"<%= oauthtoken %>";
@@ -22,7 +8,8 @@
                   $Lightning.createComponent("c:opportunityList", {},
                      "leaderboard",
                       function(cmp) {
-                         alert('Lightning Out App has loaded!');
+                         alert('Lightning Out App has loaded!'+token);
+                         
                       });
             },url,token );
         </script>
