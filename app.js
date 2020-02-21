@@ -32,7 +32,7 @@ app.get('/oauth/_callback', function(req, res) {
     if(!err) {
       console.log('Access Token: ' + resp.access_token);
       app.locals.oauthtoken = resp.access_token;
-      app.locals.lightningEndPointURI = "https://lightning-out-developer-edition.ap16.force.com";
+      app.locals.lightningEndPointURI = "https://hmereddydemocomporg-dev-ed.lightning.force.com/";
       res.redirect('/home');
     } else {
       console.log('Error: ' + err.message);
